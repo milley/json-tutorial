@@ -24,6 +24,7 @@ static void test_parse_null() {
     lept_value v;
     v.type = LEPT_FALSE;
     EXPECT_EQ_INT(LEPT_PARSE_OK, lept_parse(&v, "null"));
+    EXPECT_EQ_INT(LEPT_PARSE_INVALID_VALUE, lept_parse(&v, "nullx"));
     EXPECT_EQ_INT(LEPT_NULL, lept_get_type(&v));
 }
 
