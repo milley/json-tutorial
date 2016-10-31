@@ -203,8 +203,8 @@ static void test_access_number() {
     lept_init(&v);
     lept_set_number(&v, 0.1);
     EXPECT_EQ_DOUBLE(0.1, lept_get_number(&v));
-    lept_set_number(&v, 0);
-    EXPECT_EQ_DOUBLE(0, lept_get_number(&v));
+    lept_set_number(&v, 0.0);
+    EXPECT_EQ_DOUBLE(0.0, lept_get_number(&v));
 }
 
 static void test_access_string() {
